@@ -4,7 +4,7 @@
 #' by the occDetModel in sparta.
 #' 
 #' @param input_dir The directory where all the .rdata files are located.
-#'        This will be the same as the \code{output_dir} arguement given
+#'        This will be the same as the \code{output_dir} argument given
 #'        to occDetModel in sparta when creating the output.
 #'        
 #' @param region If the model output contains regional estimates specify the region

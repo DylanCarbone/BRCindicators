@@ -49,7 +49,7 @@ CompositeTrend_objects <- function(indata, output_path, trend_choice = "arithmet
   }
 
     # arithmean on the occ scale
-    logit_temp_table <- as.data.frame(car::logit(as.matrix(t_table)))
+    logit_temp_table <- as.data.frame(boot::logit(as.matrix(t_table)))
 
     # geomean on the occ scale
     log_temp_table <- t_table

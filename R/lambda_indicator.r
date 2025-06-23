@@ -37,7 +37,7 @@
 #' and a table giving the 'good' years for each species as defined by the thresholds.
 #' Please note that the number of species contributing to the first year is 0 as this 
 #' is fixed to the index value.
-#' @importFrom car logit
+#' @importFrom boot logit
 #' @export
 #' @examples 
 #' ### Running from an array ####
@@ -116,7 +116,7 @@ lambda_indicator <-  function(input,
   }
   
   # Convert to Odds
-  Occ <- car::logit(Occ, adjust = 0.001) # Is this the best option?
+  Occ <- boot::logit(Occ, adjust = 0.001) # Is this the best option?
 
   # Calculate the lambda for all species-year combinations
   LogLambda <- apply(Occ, c(1,3), lambda_calc)

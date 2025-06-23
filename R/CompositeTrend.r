@@ -45,7 +45,7 @@
 #' 		   95% credible intervals, SD of the mean and standard error of the mean.
 #' @import ggplot2
 #' @import reshape2
-#' @import car
+#' @import boot
 #' @export
 
 CompositeTrend <- function(indata, output_path, trend_choice = "arithmetic_logit_occ", group_name,
@@ -76,7 +76,7 @@ CompositeTrend <- function(indata, output_path, trend_choice = "arithmetic_logit
   }
 
     # arithmean on the occ scale
-    logit_temp_table <- as.data.frame(car::logit(as.matrix(t_table)))
+    logit_temp_table <- as.data.frame(boot::logit(as.matrix(t_table)))
 
     # geomean on the occ scale
     log_temp_table <- t_table
